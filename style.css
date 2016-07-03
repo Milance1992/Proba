@@ -1,0 +1,21 @@
+﻿body {
+    background-color:InactiveBorder;
+    font-family: Tahoma;
+    margin: 0;
+    border: 0;
+}
+
+#main-form {
+    margin-top: 40px;
+}
+
+/* FORMA */
+
+
+.error-msg {
+    font-size: 10px;
+    font-style: italic;
+    color: red;
+    visibility: hidden;
+}
+

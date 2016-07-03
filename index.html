@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Naslov</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<div class="container" id="main-form">
+    <div class="row">
+        <div class="col-sm-4">
+            <form name="validate">
+                <div class="form-group">
+                    <label>Username <span class="error-msg">This is required</span></label>
+                    <input type="text" name="username_value" class="form-control" id="user_id" placeholder="Username"/>
+                </div>
+                <div class="form-group">
+                    <label>Password <span class="error-msg">This is required</span></label>
+                    <input type="password" name="password_value" class="form-control" id="pass_id" placeholder="Password"/>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-info" onclick="submit();">Submit</button>
+        </div> <!-- end of col-sm-4 -->
+    </div> <!-- end of row -->
+</div> <!-- end of container -->
+
+
+
+
+
+
+
+    <script src="jquery/jquery-3.0.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+    function submit() {
+        var user = document.getElementsByName('username_value')[0].value;
+        var pass = document.getElementsByName('password_value')[0].value;
+        var spans = document.getElementsByTagName('span');
+
+        if (user === "") {
+            spans[0].setAttribute("style", "visibility: visible");
+        } else {
+            spans[0].setAttribute("style", "visibility: hidden");
+        }
+
+        if (pass === "") {
+            spans[1].setAttribute("style", "visibility: visible");
+        } else {
+            spans[1].setAttribute("style", "visibility: hidden");
+        }
+    }
+</script>
+
+
+</body>
+</html>
